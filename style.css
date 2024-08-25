@@ -1,0 +1,100 @@
+/* Asegura que la imagen no se pueda arrastrar ni hacer clic derecho */
+img {
+    -webkit-user-drag: none; /* Para Chrome/Safari */
+    user-drag: none; /* Para otros navegadores */
+    pointer-events: none; /* Desactiva eventos del mouse */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evita el scroll en la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDE6EB;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre la imagen y la sección de info */
+    padding: 20px;
+    background-color: #e1e1e1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 800px; /* Ancho del contenedor */
+    height: 600px; /* Altura del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    overflow: hidden; /* Evita el scroll dentro del contenedor */
+}
+
+.image-wrapper, .info-wrapper {
+    flex: 1; /* Permite que ambos bloques crezcan por igual */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+width: 300px;
+}
+
+.image-wrapper img {
+    max-width: 300px;
+    max-height: 500px; /* Ajusta la altura máxima para que no se desborde del contenedor */
+    border-radius: 8px;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	max-width: 300px;
+}
+
+.logo-text {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px; /* Tamaño del logo */
+    height: auto;
+}
+
+.text {
+    font-size: 18px;
+    margin: 10px 0;
+width: 200px;
+}
+
+.reserve-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #435DB8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+width: 200px;
+}
+
+.reserve-button:hover {
+    background-color: #697DC6;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
